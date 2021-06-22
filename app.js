@@ -14,13 +14,3 @@ function filterOnClass(baseClass, s) {
     }
   });
 }
-document.addEventListener("DOMContentLoaded", () => {
-  // copy
-var clipboard = new ClipboardJS('ol li');
-clipboard.on('success', function(e) {
-var x = document.getElementById("toast")
-    x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 1000);
-});
-
-});
