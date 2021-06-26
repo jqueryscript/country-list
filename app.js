@@ -1,16 +1,1 @@
-  // filter
-function filterOnClass(baseClass, s) {
-  let re = new RegExp(s.trim(), 'i');
-  document.querySelectorAll('.' + baseClass).forEach(node => {
-    let cNames = Array.from(node.classList);
-    // Show all if search string is blank
-    if (s.trim() == '') {
-      node.classList.remove('hide');
-    // Otherwise, filter
-    } else if (cNames.some(cName => re.test(cName))) {
-      node.classList.remove('hide');
-    } else {
-       node.classList.add('hide');
-    }
-  });
-}
+function filterOnClass(e,s){let t=new RegExp(s.trim(),"i");document.querySelectorAll("."+e).forEach(e=>{let i=Array.from(e.classList);""==s.trim()?e.classList.remove("hide"):i.some(e=>t.test(e))?e.classList.remove("hide"):e.classList.add("hide")})}
